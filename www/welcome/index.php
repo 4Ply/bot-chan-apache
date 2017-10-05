@@ -1,3 +1,7 @@
+<?php
+include_once '../php/provider.php';
+$redirect_url = $_COOKIE['redirect_url'];
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../css/font.css">
 
     <!--Let browser know website is optimized for mobile-->
-    <meta name='viewport' content='width=device-width, initial-scale=0.7, maximum-scale=1.0, user-scalable=0' />
+    <meta name='viewport' content='width=device-width, initial-scale=0.7, maximum-scale=1.0, user-scalable=0'/>
     <meta name="google-signin-client_id"
           content="914669485111-da1dk2lhmsir5do7o6v47jmvkb3mue58.apps.googleusercontent.com">
 
@@ -42,6 +46,7 @@
             me</a>
         <input type="hidden" id="token" name="token"/>
     </form>
+    <input type="hidden" id="redirect-url" value="<?php echo $redirect_url; ?>"/>
 </div>
 
 <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
@@ -72,6 +77,11 @@
 
         $("#google-sign-in-button").hide();
         $("#sign-in-button").show();
+
+        var redirectURL = $("#redirect-url").val();
+        if (redirectURL !== "") {
+            $("#sign-in-button").click();
+        }
     }
 </script>
 
