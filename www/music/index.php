@@ -33,7 +33,7 @@ body_header();
 
 <div class="container">
     <form onsubmit="play(); return false;">
-        <input id="song-input" placeholder="Play a song" value="" autocomplete="off" onkeyup="filter()">
+        <input id="song-input" placeholder="Type to filter, or paste a YouTube URL" value="" autocomplete="off" onkeyup="filter()">
         <h6 id="last-message" class="grey-text"></h6>
         <input type="submit" class="music-stop btn red" value="STOP" onmousedown="stopPlayback()"/>
         <input type="submit" class="music-right btn orange" value="SKIP" onmousedown="skipTrack()"/>
