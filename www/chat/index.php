@@ -3,6 +3,7 @@ include_once('../config.php');
 include_once('../php/utils.php');
 include_once('../php/header_util.php');
 require_once '../php/login.php';
+require_once '../php/reply_notifier.php';
 
 ?>
 <!DOCTYPE html>
@@ -20,6 +21,8 @@ require_once '../php/login.php';
     <meta name='viewport' content='width=device-width, initial-scale=0.6, maximum-scale=1.0, user-scalable=0'/>
 
     <script src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/material.spinner.min.js"></script>
     <script src="../js/loadingoverlay.min.js"></script>
     <script src="../js/loadingoverlay_progress.min.js"></script>
     <script src="../js/progress_helper.js"></script>
@@ -29,6 +32,7 @@ require_once '../php/login.php';
 
 <?php
 body_header();
+add_reply_scripts();
 ?>
 
 <div class="container">

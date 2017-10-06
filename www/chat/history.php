@@ -5,7 +5,7 @@ require_once '../php/provider.php';
 require_once '../php/login.php';
 
 try {
-    $url = API_BASE . "/messages";
+    $url = API_BASE . "/messagesForUser?clientID=" . getEmail() . "&platform=SITE-CHAT";
     $response = \Httpful\Request::post($url)
         ->body('{"platform":"SITE-CHAT","matchers":[".*"]}')
         ->send();
@@ -13,8 +13,7 @@ try {
     <table style="width:100%" class="centered bordered">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>Sender</th>
+            <th>Client ID</th>
             <th>Platform</th>
             <th>message</th>
         </tr>
@@ -22,7 +21,6 @@ try {
 
         <? foreach (array_reverse($response->body) as $message) {
             echo "<tr>
-                <td class='grey-text'>" . $message->id . "</td>
                 <td>" . $message->sender . "</td>
                 <td>" . $message->platform . "</td>
                 <td>" . $message->message . "</td>
