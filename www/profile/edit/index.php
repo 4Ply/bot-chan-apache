@@ -92,7 +92,7 @@ try {
 
         var url = "update_node_status.php";
         $.get(url + "?node=" + node + "&enabled=" + enabled, function () {
-            Materialize.toast('Node updated!', 3000)
+            Materialize.toast('Node preferences updated!', 3000)
             window.location.reload();
         });
     }

@@ -21,5 +21,5 @@ try {
     </table>
     <?php
 } catch (Exception $e) {
-    echo "Failed to retrieve message history";
+    echo "Failed to retrieve music list";
 }

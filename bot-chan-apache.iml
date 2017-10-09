@@ -5,17 +5,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar://$MODULE_DIR$/www/php/httpful.phar/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="phar://$MODULE_DIR$/www/php/httpful.phar/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="platform" level="application" />
   </component>
 </module>

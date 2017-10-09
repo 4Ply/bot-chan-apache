@@ -13,16 +13,14 @@ try {
     <table style="width:100%" class="centered bordered">
         <thead>
         <tr>
-            <th>Client ID</th>
-            <th>Platform</th>
+            <th>PlatformID</th>
             <th>message</th>
         </tr>
         </thead>
 
         <? foreach (array_reverse($response->body) as $message) {
             echo "<tr>
-                <td>" . $message->sender . "</td>
-                <td>" . $message->platform . "</td>
+                <td>" . $message->platformID . "</td>
                 <td>" . $message->message . "</td>
             </tr>
         ";
